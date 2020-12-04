@@ -11,6 +11,8 @@ public interface GestionTareasInterface {
     public List<Tarea> getTareasPorEstado(String estado) throws TareaException, SQLException;
     public List<Tarea> modificarTarea(int idTarea, String nuevoEstado) throws TareaException, SQLException;
     public void insertarTarea(String descripcion) throws TareaException, SQLException;
+    public void deleteTarea(List<Integer> idTarea) throws TareaException, SQLException;
+    public void archivarTarea(List<Integer> idTarea) throws TareaException, SQLException;
     
     
     

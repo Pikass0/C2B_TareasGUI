@@ -13,12 +13,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.table.JTableHeader;
 import tareas.dominio.Tarea;
 import tareas.excepciones.TareaException;
 import tareas.servicios.GestionTareas;
@@ -35,9 +37,9 @@ public class MainFrame extends javax.swing.JFrame {
     List<Tarea> tareasTodo, tareasInProgress, tareasDone;
 
     public MainFrame() {
-        prepararTheme();
+        //prepararTheme();
         initComponents();
-
+        setIconosBtn();
         //Mis inicializaciones
         inicializarBD();
         //inicializamos leyendo de bd
@@ -108,9 +110,11 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 153));
+        jScrollPane1.setForeground(new java.awt.Color(255, 255, 153));
+
         btnCrearTarea.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnCrearTarea.setForeground(new java.awt.Color(0, 102, 0));
-        btnCrearTarea.setText("Crear tarea");
         btnCrearTarea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCrearTareaActionPerformed(evt);
@@ -126,7 +130,6 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setText("IN PROGRESS");
 
-        btnRefresh.setText("🗘");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefreshActionPerformed(evt);
@@ -135,14 +138,14 @@ public class MainFrame extends javax.swing.JFrame {
 
         btnEliminar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnEliminar.setForeground(new java.awt.Color(102, 0, 0));
-        btnEliminar.setText("Eliminar tareas");
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
             }
         });
 
-        btnArchivar.setText("Archivar 📁");
+        btnArchivar.setBackground(null);
+        btnArchivar.setForeground(null);
         btnArchivar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnArchivarActionPerformed(evt);
@@ -154,63 +157,59 @@ public class MainFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(388, 388, 388)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(98, 98, 98))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(121, 121, 121))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(388, 388, 388)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel1)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(119, 119, 119)
                         .addComponent(jLabel3))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(57, 57, 57)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(51, 51, 51)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(btnTodoInProgress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnInProgressTodo, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(48, 48, 48)
+                                    .addComponent(btnInProgressTodo, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(75, 75, 75)
+                                .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(48, 48, 48)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(43, 43, 43)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(btnInProgressDone, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnDoneInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(43, 43, 43))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(124, 124, 124)
-                                .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(136, 136, 136)
-                                .addComponent(btnCrearTarea, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                    .addComponent(btnDoneInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnCrearTarea, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(43, 43, 43)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnArchivar)
-                                .addGap(26, 26, 26)))))
+                                .addComponent(btnArchivar, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(8, 8, 8)))))
                 .addContainerGap(62, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(121, 121, 121))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnRefresh)
+                        .addGap(408, 408, 408))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -236,12 +235,14 @@ public class MainFrame extends javax.swing.JFrame {
                                         .addGap(39, 39, 39)
                                         .addComponent(btnDoneInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(59, 59, 59)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCrearTarea)
-                    .addComponent(btnArchivar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addGap(46, 46, 46)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(btnEliminar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
+                    .addComponent(btnArchivar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCrearTarea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         pack();
@@ -416,7 +417,15 @@ public class MainFrame extends javax.swing.JFrame {
             gt.archivarTarea(idTareas);
             inicializarTablas();
         } catch (TareaException ex) {
-            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            //tendria que ser una constante supongo
+            if (ex.getMessage().equals("No se han seleccionado tareas")) {
+                //si no ha seleccionado ninguna tarea
+                JOptionPane.showMessageDialog(this, "Seleccione al menos una tarea de 'Done'");
+            }else{
+                //cualquier otro error
+                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
         } catch (SQLException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -578,4 +587,44 @@ public class MainFrame extends javax.swing.JFrame {
         
         
     }
+
+    private void setIconosBtn() {
+        //set iconos
+        String dir = System.getProperty("user.dir") + "/images/folder.png";
+        btnArchivar.setIcon(new ImageIcon(dir));
+        dir = System.getProperty("user.dir") + "/images/delete.png";
+        btnEliminar.setIcon(new ImageIcon(dir));
+        dir = System.getProperty("user.dir") + "/images/note.png";
+        btnCrearTarea.setIcon(new ImageIcon(dir));
+        dir = System.getProperty("user.dir") + "/images/refresh.png";
+        btnRefresh.setIcon(new ImageIcon(dir));
+        
+        //ahcerlos invisibles
+        btnArchivar.setOpaque(false);
+        btnArchivar.setContentAreaFilled(false);
+        btnArchivar.setBorderPainted(false);
+        btnEliminar.setOpaque(false);
+        btnEliminar.setContentAreaFilled(false);
+        btnEliminar.setBorderPainted(false);
+        btnCrearTarea.setOpaque(false);
+        btnCrearTarea.setContentAreaFilled(false);
+        btnCrearTarea.setBorderPainted(false);
+        btnRefresh.setOpaque(false);
+        btnRefresh.setContentAreaFilled(false);
+        btnRefresh.setBorderPainted(false);
+        //tablas invi
+        tablaTodo.setBackground(Color.white);
+        tablaInProgress.setBackground(Color.white);
+        tablaDone.setBackground(Color.white);
+
+        
+        //para ser mas significativo, ponemos tooltips
+        btnArchivar.setToolTipText("Archivar tareas");
+        btnCrearTarea.setToolTipText("Crear tarea");
+        btnEliminar.setToolTipText("Eliminar tareas");
+        btnRefresh.setToolTipText("Actualizar desde base de datos");
+        
+    }
+    
+
 }

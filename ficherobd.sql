@@ -14,3 +14,4 @@ INSERT INTO TAREAS (DESCRIPCION, ESTADO) VALUES ('Hacer 5', 'TODO');
 SELECT * FROM TAREAS;
 update tareas set estado = 'done' where id_tarea = 2;
 select * from tareas;
+delete from tareas where id_tarea = 12;
