@@ -37,7 +37,7 @@ public class MainFrame extends javax.swing.JFrame {
     List<Tarea> tareasTodo, tareasInProgress, tareasDone;
 
     public MainFrame() {
-        //prepararTheme();
+        //prepararTheme();..
         initComponents();
         setIconosBtn();
         //Mis inicializaciones
