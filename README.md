@@ -4,19 +4,14 @@
 
 
 <!-- PROJECT SHIELDS -->
+
+[![Contributors][contributors-shield]][contributors-url] 
 <!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![Contact][discord-shield]][discord-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn][linkedin-shield]][linkedin-url] -->
 
 
 
@@ -139,7 +134,7 @@ Si quieres contribuir:
 
 [discord-shield]: https://img.shields.io/badge/chat-on%20discord-7289da.svg?style=for-the-badge
 [discord-url]: https://www.discord.com/users/290575161869205504
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/Pikass0/C2B_TareasGUI?color=green
 [contributors-url]: https://github.com/Pikass0/C2B_TareasGUI/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
 [forks-url]: https://github.com/Pikass0/C2B_TareasGUI/network/members
