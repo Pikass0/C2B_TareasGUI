@@ -56,7 +56,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre el proyecto
 
-[![product-screenshot]]<!--(https://example.com) por si se quiere metir link-->
+![product-screenshot]<!--(https://example.com) por si se quiere metir link-->
 
 Clásico Kanban, un tablero formado por tres listas para poder organizarse por tareas. Las listas suelen ser: To Do, In Progres, Done. (Pendiente, en progreso, terminado)
 
@@ -129,12 +129,12 @@ Si quieres contribuir:
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[discord-shield]: https://img.shields.io/badge/chat-on%20discord-7289da.svg?style=flat&logo=appveyor
+[discord-shield]: https://img.shields.io/badge/chat-on%20discord-7289da.svg?style=flat&logo=discord
 [discord-url]: https://www.discord.com/users/290575161869205504
 [contributors-shield]: https://img.shields.io/github/contributors/Pikass0/C2B_TareasGUI?color=green
 [contributors-url]: https://github.com/Pikass0/C2B_TareasGUI/graphs/contributors
 [issues-shield]: https://img.shields.io/github/issues-raw/Pikass0/C2B_TareasGUI?color=orange
 [issues-url]: https://github.com/Pikass0/C2B_TareasGUI/issues
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat&logo=linkedin&color=blue
 [linkedin-url]: https://www.linkedin.com/in/marcelo-toral-martínez-573735176/
 [product-screenshot]: images/readme_swing.jpg
