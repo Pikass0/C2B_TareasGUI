@@ -115,6 +115,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         btnCrearTarea.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnCrearTarea.setForeground(new java.awt.Color(0, 102, 0));
+        btnCrearTarea.setToolTipText("Crear");
         btnCrearTarea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCrearTareaActionPerformed(evt);
@@ -130,6 +131,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setText("IN PROGRESS");
 
+        btnRefresh.setToolTipText("Refrescar bd");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefreshActionPerformed(evt);
@@ -138,14 +140,14 @@ public class MainFrame extends javax.swing.JFrame {
 
         btnEliminar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnEliminar.setForeground(new java.awt.Color(102, 0, 0));
+        btnEliminar.setToolTipText("Eliminar");
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
             }
         });
 
-        btnArchivar.setBackground(null);
-        btnArchivar.setForeground(null);
+        btnArchivar.setToolTipText("Archivar (solo tareas terminadas)");
         btnArchivar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnArchivarActionPerformed(evt);
