@@ -6,12 +6,11 @@
 <!-- PROJECT SHIELDS -->
 
 [![Contributors][contributors-shield]][contributors-url] 
-<!--
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
+<!--[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]-->
 [![Issues][issues-shield]][issues-url]
 [![Contact][discord-shield]][discord-url]
-[![LinkedIn][linkedin-shield]][linkedin-url] -->
+[![LinkedIn][linkedin-shield]][linkedin-url] 
 
 
 
@@ -136,11 +135,11 @@ Si quieres contribuir:
 [discord-url]: https://www.discord.com/users/290575161869205504
 [contributors-shield]: https://img.shields.io/github/contributors/Pikass0/C2B_TareasGUI?color=green
 [contributors-url]: https://github.com/Pikass0/C2B_TareasGUI/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: 
 [forks-url]: https://github.com/Pikass0/C2B_TareasGUI/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: 
 [stars-url]: https://github.com/Pikass0/C2B_TareasGUI/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues-raw/Pikass0/C2B_TareasGUI?color=orange
 [issues-url]: https://github.com/Pikass0/C2B_TareasGUI/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/marcelo-toral-martínez-573735176/
