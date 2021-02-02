@@ -83,7 +83,7 @@ Cómo ejecutar el proyecto:
 
 ### Requisitos
 
-Descargar el Driver JDBC _[Derby](http://db.apache.org/derby/derby_downloads.html)_
+Descargar el Driver JDBC [Derby](http://db.apache.org/derby/derby_downloads.html)
 
 
 ### Instalación
