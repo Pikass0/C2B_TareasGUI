@@ -4,7 +4,7 @@
 
 
 <!-- PROJECT SHIELDS -->
-
+![release-shield]
 [![Contributors][contributors-shield]][contributors-url] 
 [![Issues][issues-shield]][issues-url]
 [![Contact][discord-shield]][discord-url]
@@ -128,6 +128,8 @@ Si quieres contribuir:
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[release-shield]: https://img.shields.io/badge/release%20date-Nov%202020-lightgrey
 
 [discord-shield]: https://img.shields.io/badge/chat-on%20discord-7289da.svg?style=flat&logo=discord
 [discord-url]: https://www.discord.com/users/290575161869205504
