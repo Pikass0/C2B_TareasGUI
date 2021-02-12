@@ -4,11 +4,12 @@
 
 
 <!-- PROJECT SHIELDS -->
+![language-shield]
 ![release-shield]
 [![Contributors][contributors-shield]][contributors-url] 
 [![Issues][issues-shield]][issues-url]
 [![Contact][discord-shield]][discord-url]
-[![LinkedIn][linkedin-shield]][linkedin-url] 
+
 
 
 
@@ -129,6 +130,7 @@ Si quieres contribuir:
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
+[language-shield]: https://img.shields.io/badge/language-black?style=flat&logo=java
 [release-shield]: https://img.shields.io/badge/release%20date-Nov%202020-lightgrey
 
 [discord-shield]: https://img.shields.io/badge/chat-on%20discord-7289da.svg?style=flat&logo=discord
@@ -138,5 +140,5 @@ Si quieres contribuir:
 [issues-shield]: https://img.shields.io/github/issues-raw/Pikass0/C2B_TareasGUI?color=orange
 [issues-url]: https://github.com/Pikass0/C2B_TareasGUI/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat&logo=linkedin&color=blue
-[linkedin-url]: https://www.linkedin.com/in/marcelo-toral-martínez-573735176/
+
 [product-screenshot]: images/readme_swing.jpg
