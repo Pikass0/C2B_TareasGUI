@@ -59,7 +59,7 @@
 
 ![product-screenshot]<!--(https://example.com) por si se quiere metir link-->
 
-Clásico Kanban, un tablero formado por tres listas para poder organizarse por tareas. Las listas suelen ser: To Do, In Progres, Done. (Pendiente, en progreso, terminado)
+Clásico Kanban, un tablero formado por tres listas para poder organizarse por tareas. Las listas suelen ser: To Do, In Progress, Done. (Pendiente, en progreso, terminado)
 
 ¿Qué cosas se pueden hacer?
 * Mover una tarea de una lista a otra con ayuda de los botones
